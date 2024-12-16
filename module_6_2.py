@@ -33,7 +33,7 @@ class Sedan (Vehicle):
     __PASSENGERS_LIMIT = 5
 
     def __init__(self, owner, model, engine_power, color):
-        super().__init__(owner, model, engine_power, color)
+        Vehicle.__init__(self, owner, model, engine_power, color)
 
 
 # Текущие цвета __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
