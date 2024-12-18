@@ -42,7 +42,7 @@ class AquaticAnimal(Animal): # Класс описывающий плавающ�
     _DEGREE_OF_DANGER = 3
 
     def dive_in(self, dz):
-        self._cords[2] = -(abs(dz) * self.speed / 2)
+        self._cords[2] -= int(abs((dz) * self.speed / 2))
 
 
 class PoisonousAnimal(Animal):  #Класс описывающий ядовитых животных
@@ -55,7 +55,6 @@ class Duckbill(Bird, AquaticAnimal, PoisonousAnimal):
 
 db = Duckbill(10)
 print(db.live)
-
 print(db.beak)
 db.speak()
 db.attack()
@@ -64,3 +63,4 @@ db.get_cords()
 db.dive_in(6)
 db.get_cords()
 db.lay_eggs()
+
